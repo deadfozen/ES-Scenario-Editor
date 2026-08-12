@@ -1,0 +1,2 @@
+CMakeFiles/es_scenario_editor.dir/es_scenario_editor_autogen/mocs_compilation.cpp.obj: \
+ C:\Users\1\Documents\es_scenario_editor\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\es_scenario_editor_autogen\mocs_compilation.cpp
