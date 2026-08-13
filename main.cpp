@@ -38,7 +38,6 @@ bool showNewFileDialog(QWidget *parent) {
 
     QVBoxLayout *mainLayout = new QVBoxLayout(&dialog);
 
-    // поле для ввода названия файла
     QHBoxLayout *nameLayout = new QHBoxLayout();
     QLabel *nameLabel = new QLabel("Имя файла:", &dialog);
     nameLabel->setFixedWidth(100);
@@ -49,7 +48,6 @@ bool showNewFileDialog(QWidget *parent) {
     nameLayout->addWidget(nameEdit);
     mainLayout->addLayout(nameLayout);
 
-    // выбор расширения
     QHBoxLayout *extLayout = new QHBoxLayout();
     QLabel *extlabel = new QLabel("Расширение:", &dialog);
     extlabel->setFixedWidth(100);
@@ -59,7 +57,6 @@ bool showNewFileDialog(QWidget *parent) {
     extLayout->addWidget(extCombo);
     mainLayout->addLayout(extLayout);
 
-    // выбор папки для сейва
     QHBoxLayout *pathLayout = new QHBoxLayout();
     QLabel *pathLabel = new QLabel("Папка:", &dialog);
     pathLabel->setFixedWidth(100);
@@ -79,7 +76,6 @@ bool showNewFileDialog(QWidget *parent) {
     mainLayout->addLayout(pathLayout);
     mainLayout->addStretch();
 
-    // кнопки
     QHBoxLayout *buttonLayout = new QHBoxLayout();
     QPushButton *createButton = new QPushButton("Создать", &dialog);
     QPushButton *cancelButton = new QPushButton("Отмена", &dialog);
@@ -88,7 +84,6 @@ bool showNewFileDialog(QWidget *parent) {
     buttonLayout->addWidget(cancelButton);
     mainLayout->addLayout(buttonLayout);
 
-    // Обзор папки
     QObject::connect(browseButton, &QPushButton::clicked, [&]() {
         QString folder = QFileDialog::getExistingDirectory(&dialog, "Выберите папку",
                                                            currentOpenFolder.isEmpty() ? QDir::homePath() : currentOpenFolder);
@@ -139,13 +134,11 @@ int main(int argc, char *argv[]) {
     window.setWindowTitle("ES Scenario Editor");
     window.resize(1400, 900);
 
-    // Центральный виджет
     QWidget *centralWidget = new QWidget(&window);
     QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget);
     mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setSpacing(2);
 
-    // Левая панель - файловый менеджер
     QWidget *leftPanel = new QWidget();
     leftPanel->setMinimumWidth(200);
     leftPanel->setMaximumWidth(350);
@@ -156,21 +149,18 @@ int main(int argc, char *argv[]) {
     projectLabel->setStyleSheet("font-weight: bold; padding: 5px; color: #ffffff;");
     leftLayout->addWidget(projectLabel);
 
-    // Создаем пустую модель для файлов
     QFileSystemModel *fileModel = new QFileSystemModel();
     fileModel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
 
     QTreeView *fileTree = new QTreeView();
     fileTree->setModel(fileModel);
-    // Не устанавливаем корневую папку - показываем пустой список
     fileTree->setRootIndex(QModelIndex());
     fileTree->setHeaderHidden(true);
     fileTree->setIndentation(15);
 
-    // Скрываем все колонки кроме первой (с именами файлов)
-    fileTree->hideColumn(1); // Size
-    fileTree->hideColumn(2); // Type
-    fileTree->hideColumn(3); // Date Modified
+    fileTree->hideColumn(1);
+    fileTree->hideColumn(2);
+    fileTree->hideColumn(3);
 
     fileTree->setStyleSheet(
         "QTreeView {"
@@ -193,7 +183,6 @@ int main(int argc, char *argv[]) {
         );
     leftLayout->addWidget(fileTree);
 
-    // Кнопка выбора папки
     QPushButton *changeFolderBtn = new QPushButton("📂 Выбрать папку проекта");
     changeFolderBtn->setStyleSheet(
         "QPushButton {"
@@ -210,7 +199,6 @@ int main(int argc, char *argv[]) {
         "}"
         );
 
-    // Добавляем подсказку о выборе папки
     QLabel *hintLabel = new QLabel("⚠️ Папка проекта не выбрана\nНажмите кнопку ниже,\nчтобы выбрать папку");
     hintLabel->setStyleSheet("color: #888888; padding: 10px; text-align: center;");
     hintLabel->setAlignment(Qt::AlignCenter);
@@ -221,31 +209,25 @@ int main(int argc, char *argv[]) {
         QString folder = QFileDialog::getExistingDirectory(&window, "Выберите папку проекта",
                                                            currentOpenFolder.isEmpty() ? QDir::homePath() : currentOpenFolder);
         if (!folder.isEmpty()) {
-            // Скрываем подсказку
             hintLabel->hide();
 
-            // Устанавливаем новую корневую папку
             fileModel->setRootPath(folder);
             fileTree->setRootIndex(fileModel->index(folder));
             currentOpenFolder = folder;
 
-            // Обновляем заголовок
             projectLabel->setText("📁 " + QFileInfo(folder).fileName());
 
-            // Обновляем статус
             window.statusBar()->showMessage("Выбрана папка: " + folder, 3000);
         }
     });
     leftLayout->addWidget(changeFolderBtn);
 
-    // Центральная панель - редактор кода
     QWidget *centerPanel = new QWidget();
     centerPanel->setStyleSheet("background-color: #1a1a1a;");
 
     QVBoxLayout *centerLayout = new QVBoxLayout(centerPanel);
     centerLayout->setContentsMargins(5, 5, 5, 5);
 
-    // Панель с именем файла
     QHBoxLayout *toolbarLayout = new QHBoxLayout();
     QLabel *fileLabel = new QLabel("📄 Без названия");
     fileLabel->setStyleSheet("font-weight: bold; color: #ffffff;");
@@ -253,7 +235,6 @@ int main(int argc, char *argv[]) {
     toolbarLayout->addStretch();
     centerLayout->addLayout(toolbarLayout);
 
-    // Редактор кода
     QTextEdit *codeEditor = new QTextEdit();
     codeEditor->setFontFamily("Consolas");
     codeEditor->setFontPointSize(12);
@@ -272,7 +253,6 @@ int main(int argc, char *argv[]) {
     codeEditor->setPlaceholderText("Сначала выберите папку проекта, затем создайте или откройте файл");
     centerLayout->addWidget(codeEditor);
 
-    // Правая панель - ассеты
     QWidget *rightPanel = new QWidget();
     rightPanel->setMinimumWidth(200);
     rightPanel->setMaximumWidth(350);
@@ -283,7 +263,6 @@ int main(int argc, char *argv[]) {
     assetsLabel->setStyleSheet("font-weight: bold; padding: 5px; color: #ffffff;");
     rightLayout->addWidget(assetsLabel);
 
-    // Список ассетов с сообщением о недоступности
     QListWidget *assetsList = new QListWidget();
     assetsList->setStyleSheet(
         "QListWidget {"
@@ -297,14 +276,13 @@ int main(int argc, char *argv[]) {
         "}"
         );
 
-    QListWidgetItem *placeholderItem = new QListWidgetItem("🖼️ Ассеты пока недоступны\n\nАссеты игры будут добавлены\nпосле выбора папки проекта");
+    QListWidgetItem *placeholderItem = new QListWidgetItem("🖼️ Ассеты пока недоступны\n\nАссеты игры будут добавлены позже");
     placeholderItem->setTextAlignment(Qt::AlignCenter);
     placeholderItem->setForeground(QColor(100, 100, 100));
     assetsList->addItem(placeholderItem);
 
     rightLayout->addWidget(assetsList);
 
-    // Добавляем панели в сплиттер
     QSplitter *splitter = new QSplitter(Qt::Horizontal);
     splitter->addWidget(leftPanel);
     splitter->addWidget(centerPanel);
@@ -314,7 +292,6 @@ int main(int argc, char *argv[]) {
     mainLayout->addWidget(splitter);
     window.setCentralWidget(centralWidget);
 
-    // Статусная строка
     QStatusBar *statusBar = window.statusBar();
     statusBar->setStyleSheet("background-color: #1c1c1c; color: #fff;");
 
@@ -322,7 +299,6 @@ int main(int argc, char *argv[]) {
     statusLabel->setStyleSheet("padding: 2px; color: #ffaa00;");
     statusBar->addWidget(statusLabel);
 
-    // Информация о позиции курсора
     QLabel *cursorLabel = new QLabel("Строка: 1, Колонка: 1");
     cursorLabel->setStyleSheet("color: #888;");
     QObject::connect(codeEditor, &QTextEdit::cursorPositionChanged, [codeEditor, cursorLabel]() {
@@ -333,12 +309,10 @@ int main(int argc, char *argv[]) {
     });
     statusBar->addPermanentWidget(cursorLabel);
 
-    // Версия
-    QLabel *versionLabel = new QLabel("Версия: 0.1.0");
+    QLabel *versionLabel = new QLabel("Версия: 0.1.0 (3)");
     versionLabel->setStyleSheet("color: #666; font-size: 10px; padding: 2px;");
     statusBar->addPermanentWidget(versionLabel);
 
-    // Функция открытия файла
     auto openFile = [&](const QString &filePath) {
         if (filePath.isEmpty()) return;
         QFile file(filePath);
@@ -353,7 +327,6 @@ int main(int argc, char *argv[]) {
         }
     };
 
-    // Функция сохранения файла
     auto saveFile = [&]() {
         if (currentOpenFolder.isEmpty()) {
             QMessageBox::warning(&window, "Ошибка", "Сначала выберите папку проекта!");
@@ -382,7 +355,6 @@ int main(int argc, char *argv[]) {
         }
     };
 
-    // Двойной клик по файлу в дереве
     QObject::connect(fileTree, &QTreeView::doubleClicked, [&](const QModelIndex &index) {
         if (currentOpenFolder.isEmpty()) {
             QMessageBox::information(&window, "Информация", "Сначала выберите папку проекта!");
@@ -395,7 +367,6 @@ int main(int argc, char *argv[]) {
         openFile(filePath);
     });
 
-    // Глобальные горячие клавиши
     QShortcut *openShortcut = new QShortcut(QKeySequence::Open, &window);
     QObject::connect(openShortcut, &QShortcut::activated, [&]() {
         if (currentOpenFolder.isEmpty()) {
@@ -411,7 +382,6 @@ int main(int argc, char *argv[]) {
     QShortcut *saveShortcut = new QShortcut(QKeySequence::Save, &window);
     QObject::connect(saveShortcut, &QShortcut::activated, saveFile);
 
-    // Меню
     QMenuBar *menuBar = window.menuBar();
     menuBar->setStyleSheet(
         "QMenuBar {"
@@ -466,7 +436,7 @@ int main(int argc, char *argv[]) {
     QObject::connect(aboutAction, &QAction::triggered, [&window]() {
         QMessageBox::about(&window, "О программе",
                            "<h2>ES Scenario Editor</h2>"
-                           "<p><b>Версия:</b> 0.1.0</p>"
+                           "<p><b>Версия:</b> 0.1.0 (3)</p>"
                            "<p>Редактор сценариев и кода для визуальной новеллы 'Бесконечное Лето'</p>"
                            "<p><i>Разработано с использованием Qt</i></p>");
     });
