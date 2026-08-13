@@ -402,6 +402,8 @@ CMakeFiles/es_scenario_editor.dir/main.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenuBar \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenubar.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenu.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QStatusBar \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstatusbar.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenu \
  C:/Qt/6.11.1/mingw_64/include/QtGui/QAction \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDialog \
@@ -482,4 +484,31 @@ CMakeFiles/es_scenario_editor.dir/main.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qfile.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtimezone.h
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTextEdit \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtextedit.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QSplitter \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsplitter.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTreeWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreewidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreeview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreewidgetitemiterator.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFileDialog \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qfiledialog.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QFile \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QTextStream \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QFileInfo \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/QFileSystemModel \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qfilesystemmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTreeView \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHeaderView \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qheaderview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/QShortcut \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qshortcut.h
