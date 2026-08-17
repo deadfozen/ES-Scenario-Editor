@@ -1,0 +1,18 @@
+{
+    "Спрайты": {
+        "Алиса": {
+            "Пионерская форма": {
+                "Хмурая": [
+                    {"name": "Далеко", "code": "dv angry pioneer far", "file": ""},
+                    {"name": "Обычно", "code": "dv angry pioneer", "file": ""},
+                    {"name": "Близко", "code": "dv angry pioneer close", "file": ""}
+                ],
+                "Плачущая": [
+                    {"name": "", "code": "", "file": ""},
+                    {"name": "", "code": "", "file": ""},
+                    {"name": "", "code": "", "file": ""}
+                ]
+            }
+        }
+    }
+}

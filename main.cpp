@@ -26,6 +26,97 @@
 #include <QTreeView>
 #include <QHeaderView>
 #include <QShortcut>
+#include <QSyntaxHighlighter>
+#include <QRegularExpression>
+#include <QTextCharFormat>
+#include <QColor>
+
+class RenPyHighlighter : public QSyntaxHighlighter
+{
+public:
+    RenPyHighlighter(QTextDocument *parent = nullptr) : QSyntaxHighlighter(parent) {
+        HighlightingRule rule;
+
+        QTextCharFormat stringFormat;
+        stringFormat.setForeground(QColor(206, 145, 120));
+        rule.pattern = QRegularExpression("\".*?\"", QRegularExpression::InvertedGreedinessOption);
+        rule.format = stringFormat;
+        highlightingRules.append(rule);
+
+        QTextCharFormat commentFormat;
+        commentFormat.setForeground(QColor(87, 166, 74));
+
+        rule.pattern = QRegularExpression("(?<![\\w\"'])#.*$");
+        rule.format = commentFormat;
+        highlightingRules.append(rule);
+
+        QTextCharFormat keywordFormat;
+        keywordFormat.setForeground(QColor(86, 156, 214));
+        keywordFormat.setFontWeight(QFont::Bold);
+
+        QStringList keywords;
+        keywords << "define" << "scene" << "show" << "play" << "return" << "label" << "if" << "elif" << "else" << "while" << "for";
+
+        for (int i = 0; i < keywords.size(); ++i) {
+            rule.pattern = QRegularExpression("\\b" + keywords[i] + "\\b");
+            rule.format = keywordFormat;
+            highlightingRules.append(rule);
+        }
+
+        QTextCharFormat dollarFormat;
+        dollarFormat.setForeground(QColor(206, 145, 120));
+        rule.pattern = QRegularExpression("\\$\\s*\\w+");
+        rule.format = dollarFormat;
+        highlightingRules.append(rule);
+
+        QTextCharFormat labelFormat;
+        labelFormat.setForeground(QColor(220, 220, 170));
+        labelFormat.setFontWeight(QFont::Bold);
+        rule.pattern = QRegularExpression("^\\s*label\\s+\\w+:");
+        rule.format = labelFormat;
+        highlightingRules.append(rule);
+
+        QTextCharFormat numberFormat;
+        numberFormat.setForeground(QColor(181, 206, 168));
+        rule.pattern = QRegularExpression("\\b\\d+\\b");
+        rule.format = numberFormat;
+        highlightingRules.append(rule);
+    }
+
+protected:
+    void highlightBlock(const QString &text) override {
+
+        bool isCommentLine = false;
+        QString trimmed = text.trimmed();
+        if (trimmed.startsWith("#")) {
+            isCommentLine = true;
+        }
+
+        if (isCommentLine) {
+            QTextCharFormat commentFormat;
+            commentFormat.setForeground(QColor(87, 166, 74));
+            setFormat(0, text.length(), commentFormat);
+            return;
+        }
+
+        for (int i = 0; i < highlightingRules.size(); ++i) {
+            const HighlightingRule &rule = highlightingRules[i];
+            QRegularExpressionMatchIterator matchIterator = rule.pattern.globalMatch(text);
+            while (matchIterator.hasNext()) {
+                QRegularExpressionMatch match = matchIterator.next();
+                setFormat(match.capturedStart(), match.capturedLength(), rule.format);
+            }
+        }
+    }
+
+private:
+    struct HighlightingRule {
+        QRegularExpression pattern;
+        QTextCharFormat format;
+    };
+
+    QList<HighlightingRule> highlightingRules;
+};
 
 static QString currentOpenFolder = "";
 static QString currentFilePath = "";
@@ -253,6 +344,9 @@ int main(int argc, char *argv[]) {
     codeEditor->setPlaceholderText("Сначала выберите папку проекта, затем создайте или откройте файл");
     centerLayout->addWidget(codeEditor);
 
+    // Создаем объект для подсветки синтаксиса
+    RenPyHighlighter *highlighter = new RenPyHighlighter(codeEditor->document());
+
     QWidget *rightPanel = new QWidget();
     rightPanel->setMinimumWidth(200);
     rightPanel->setMaximumWidth(350);
@@ -309,9 +403,27 @@ int main(int argc, char *argv[]) {
     });
     statusBar->addPermanentWidget(cursorLabel);
 
-    QLabel *versionLabel = new QLabel("Версия: 0.1.0 (3)");
+    QLabel *versionLabel = new QLabel("Версия: 0.2.0");
     versionLabel->setStyleSheet("color: #666; font-size: 10px; padding: 2px;");
     statusBar->addPermanentWidget(versionLabel);
+
+    // Функция для определения языка подсветки по расширению
+    auto updateHighlighter = [&](const QString &filePath) {
+        QFileInfo info(filePath);
+        QString extension = info.suffix().toLower();
+
+        // Пока только для .rpy, можно расширить позже
+        if (extension == "rpy") {
+            highlighter->setDocument(codeEditor->document());
+            // Переподсвечиваем весь документ
+            highlighter->rehighlight();
+        } else {
+            // Для других расширений отключаем подсветку
+            highlighter->setDocument(nullptr);
+            // Восстанавливаем документ без подсветки
+            highlighter->setDocument(codeEditor->document());
+        }
+    };
 
     auto openFile = [&](const QString &filePath) {
         if (filePath.isEmpty()) return;
@@ -324,6 +436,9 @@ int main(int argc, char *argv[]) {
             fileLabel->setText("📄 " + QFileInfo(filePath).fileName());
             statusLabel->setText("Открыт: " + filePath);
             statusLabel->setStyleSheet("padding: 2px; color: #fff;");
+
+            // Обновляем подсветку в зависимости от расширения
+            updateHighlighter(filePath);
         }
     };
 
@@ -340,6 +455,7 @@ int main(int argc, char *argv[]) {
             if (!filePath.isEmpty()) {
                 currentFilePath = filePath;
                 fileLabel->setText("📄 " + QFileInfo(filePath).fileName());
+                updateHighlighter(filePath);
             } else {
                 return;
             }
@@ -436,7 +552,7 @@ int main(int argc, char *argv[]) {
     QObject::connect(aboutAction, &QAction::triggered, [&window]() {
         QMessageBox::about(&window, "О программе",
                            "<h2>ES Scenario Editor</h2>"
-                           "<p><b>Версия:</b> 0.1.0 (3)</p>"
+                           "<p><b>Версия:</b> 0.2.0</p>"
                            "<p>Редактор сценариев и кода для визуальной новеллы 'Бесконечное Лето'</p>"
                            "<p><i>Разработано с использованием Qt</i></p>");
     });
@@ -444,9 +560,7 @@ int main(int argc, char *argv[]) {
     QAction *aboutdevAction = helpMenu->addAction("О разработчиках");
     QObject::connect(aboutdevAction, &QAction::triggered, [&window]() {
         QMessageBox::about(&window, "О разработчиках",
-                           "<h3>Разработчики</h3>"
-                           "<p><b>Главный разработчик:</b> Я</p>"
-                           "<p>Сделано с ❤️ для сообщества</p>");
+                           "");
     });
 
     window.show();

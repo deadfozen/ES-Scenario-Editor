@@ -511,4 +511,28 @@ CMakeFiles/es_scenario_editor.dir/main.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHeaderView \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qheaderview.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/QShortcut \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qshortcut.h
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qshortcut.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/QSyntaxHighlighter \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qsyntaxhighlighter.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextobject.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qevent.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qeventpoint.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qvector2d.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qvectornd.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpointingdevice.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qinputdevice.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QList \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QRect \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QSize \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QSizeF \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/QTransform \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen_platform.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qglyphrun.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qrawfont.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qfontdatabase.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QRegularExpression \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/QTextCharFormat \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/QColor
