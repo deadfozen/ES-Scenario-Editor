@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"external/QScintilla/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "qscintilla2_qt6d_autogen_timestamp_deps::@938385b14c48e9b25fd4",
+	"isGeneratorProvided" : true,
+	"name" : "qscintilla2_qt6d_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "external/QScintilla",
+		"source" : "external/QScintilla"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

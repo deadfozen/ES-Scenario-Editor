@@ -1,0 +1,71 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"external/QScintilla/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "qscintilla2_qt6_autogen_timestamp_deps::@938385b14c48e9b25fd4"
+		}
+	],
+	"id" : "qscintilla2_qt6_autogen::@938385b14c48e9b25fd4",
+	"isGeneratorProvided" : true,
+	"name" : "qscintilla2_qt6_autogen",
+	"paths" : 
+	{
+		"build" : "external/QScintilla",
+		"source" : "external/QScintilla"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/external/QScintilla/CMakeFiles/qscintilla2_qt6_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/external/QScintilla/CMakeFiles/qscintilla2_qt6_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/external/QScintilla/qscintilla2_qt6_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

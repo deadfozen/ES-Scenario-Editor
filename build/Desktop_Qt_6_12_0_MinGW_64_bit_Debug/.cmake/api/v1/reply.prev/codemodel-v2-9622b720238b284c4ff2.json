@@ -1,0 +1,156 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3249c156adfa8cf245c1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"build" : "external/QScintilla",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-external.QScintilla-Debug-6bc2185c2e279f35f589.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "external/QScintilla",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"build" : "external/QScintilla/src",
+					"jsonFile" : "directory-external.QScintilla.src-Debug-0f4c8b685ddbed043ea7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "external/QScintilla/src"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "es-scenario-editor",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "QScintilla",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "es-scenario-editor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-es-scenario-editor-Debug-872032acc6e64bbf1380.json",
+					"name" : "es-scenario-editor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "es-scenario-editor_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-es-scenario-editor_autogen-Debug-bd499aa20e283e5eaed5.json",
+					"name" : "es-scenario-editor_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "es-scenario-editor_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-es-scenario-editor_autogen_timestamp_deps-Debug-bc3a5544815f564f2c62.json",
+					"name" : "es-scenario-editor_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qscintilla2_qt6d::@938385b14c48e9b25fd4",
+					"jsonFile" : "target-qscintilla2_qt6d-Debug-d3212968a3c273f67d09.json",
+					"name" : "qscintilla2_qt6d",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qscintilla2_qt6d_autogen::@938385b14c48e9b25fd4",
+					"jsonFile" : "target-qscintilla2_qt6d_autogen-Debug-40c0c78ba9f7de7ae6c3.json",
+					"name" : "qscintilla2_qt6d_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qscintilla2_qt6d_autogen_timestamp_deps::@938385b14c48e9b25fd4",
+					"jsonFile" : "target-qscintilla2_qt6d_autogen_timestamp_deps-Debug-67ebc328b394e7ced3cc.json",
+					"name" : "qscintilla2_qt6d_autogen_timestamp_deps",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/1/Desktop/es-scenario-editor/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug",
+		"source" : "C:/Users/1/Desktop/es-scenario-editor"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

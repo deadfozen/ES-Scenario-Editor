@@ -1,0 +1,7 @@
+set(__QT_DEPLOY_TARGETS "qscintilla2_qt6d;es-scenario-editor")
+set(__QT_DEPLOY_TARGET_qscintilla2_qt6d_FILE C:/Users/1/Desktop/es-scenario-editor/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/external/QScintilla/libqscintilla2_qt6d.dll)
+set(__QT_DEPLOY_TARGET_qscintilla2_qt6d_TYPE SHARED_LIBRARY)
+set(__QT_DEPLOY_TARGET_qscintilla2_qt6d_RUNTIME_DLLS C:/Qt/6.12.0/mingw_64/bin/Qt6PrintSupport.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6Core.dll)
+set(__QT_DEPLOY_TARGET_es-scenario-editor_FILE C:/Users/1/Desktop/es-scenario-editor/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/es-scenario-editor.exe)
+set(__QT_DEPLOY_TARGET_es-scenario-editor_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_es-scenario-editor_RUNTIME_DLLS C:/Qt/6.12.0/mingw_64/bin/Qt6Multimedia.dll;C:/Users/1/Desktop/es-scenario-editor/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/external/QScintilla/libqscintilla2_qt6d.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6Network.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6Concurrent.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6PrintSupport.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.12.0/mingw_64/bin/Qt6Core.dll)

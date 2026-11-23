@@ -1,0 +1,258 @@
+{
+    "name": "Ассеты игры",
+    "children": [
+        {
+            "name": "Фоны",
+            "children": [
+                {
+                    "name": "Лагерные здания",
+                    "children": [
+                        {
+                            "name": "Медпункт",
+                            "children": [
+                                {
+                                    "name": "Снаружи",
+                                    "children": [
+                                        {"name": "День", "code": "bg ext_aidpost_day", "file": ""},
+                                        {"name": "Ночь", "code": "bg ext_aidpost_night", "file": ""}
+                                    ]
+                                },
+                                {
+                                    "name": "Внутри",
+                                    "children": [
+                                        {"name": "День", "code": "bg int_aidpost_day", "file": ""},
+                                        {"name": "День (яблоко)", "code": "bg int_aidpost_day_apply", "file": ""},
+                                        {"name": "Ночь", "code": "bg int_aidpost_night", "file": ""}
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Баня",
+                            "children": [
+                                {"name": "Ночь", "code": "bg ext_bathhouse_night", "file": ""}
+                            ]
+                        },
+                        {
+                            "name": "Пристань",
+                            "children": [
+                                {"name": "День", "code": "bg ext_boathouse_day", "file": ""},
+                                {"name": "Ночь", "code": "bg ext_boathouse_night", "file": ""}
+                            ]
+                        },
+                        {
+                            "name": "Клубы",
+                            "children": [
+                                {
+                                    "name": "Снаружи",
+                                    "children": [
+                                        {"name": "День", "code": "bg ext_clubs_day", "file": ""},
+                                        {"name": "Ночь", "code": "bg ext_clubs_night", "file": ""}
+                                    ]
+                                },
+                                {
+                                    "name": "Внутри",
+                                    "children": [
+                                        {"name": "День", "code": "bg int_clubs_male_day", "file": ""},
+                                        {"name": "Закат", "code": "bg int_clubs_male_sunset", "file": ""},
+                                        {"name": "Ночь", "code": "bg int_clubs_male2_night", "file": ""},
+                                        {"name": "Ночь (без света)", "code": "bg int_clubs_male2_night_nolight", "file": ""}
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Столовая",
+                            "children": [
+                                {
+                                    "name": "Снаружи",
+                                    "children": [
+                                        {
+                                            "name": "Вдали",
+                                            "children": [
+                                                {"name": "День", "code": "bg ext_dining_hall_away_day", "file": ""},
+                                                {"name": "Закат", "code": "bg ext_dining_hall_away_sunset", "file": ""},
+                                                {"name": "Ночь", "code": "bg ext_dining_hall_away_night", "file": ""}
+                                            ]
+                                        },
+                                        {
+                                            "name": "Вблизи",
+                                            "children": [
+                                                {"name": "День", "code": "bg ext_dining_hall_near_day", "file": ""},
+                                                {"name": "Закат", "code": "bg ext_dining_hall_near_sunset", "file": ""},
+                                                {"name": "Ночь", "code": "bg ext_dining_hall_near_night", "file": ""}
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Внутри",
+                                    "children": [
+                                        {
+                                            "name": "Пустая",
+                                            "children": [
+                                                {"name": "День", "code": "bg int_dining_hall_day", "file": ""},
+                                                {"name": "Закат", "code": "bg int_dining_hall_sunset", "file": ""},
+                                                {"name": "Ночь", "code": "bg int_dining_hall_night", "file": ""}
+                                            ]
+                                        },
+                                        {
+                                            "name": "Людная",
+                                            "children": [
+                                                {"name": "День", "code": "bg int_dining_hall_people_day", "file": ""}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Домики персонажей",
+                            "children": [
+                                {
+                                    "name": "Домик Слави и Жени",
+                                    "children": [
+                                        {
+                                            "name": "Снаружи",
+                                            "children": [
+                                                {"name": "День", "code": "bg ext_house_of_sl_day", "file": ""}
+                                            ]
+                                        },
+                                        {
+                                            "name": "Внутри",
+                                            "children": [
+                                                {"name": "День", "code": "bg int_house_of_sl_day", "file": ""}
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Домик Алисы и Ульяны",
+                                    "children": [
+                                        {
+                                            "name": "Снаружи",
+                                            "children": [
+                                                {"name": "День", "code": "bg ext_house_of_dv_day", "file": ""},
+                                                {"name": "Ночь", "code": "bg ext_house_of_dv_night", "file": ""}
+                                            ]
+                                        },
+                                        {
+                                            "name": "Внутри",
+                                            "children": [
+                                                {"name": "День", "code": "bg int_house_of_dv_day", "file": ""},
+                                                {"name": "Ночь", "code": "bg int_house_of_dv_night", "file": ""}
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Домик Ольги Дмитриевны",
+                                    "children": [
+                                        {
+                                            "name": "Снаружи",
+                                            "children": [
+                                                {"name": "День", "code": "bg ext_house_of_mt_day", "file": ""},
+                                                {"name": "Закат", "code": "bg ext_house_of_mt_sunset", "file": ""},
+                                                {"name": "Ночь", "code": "bg ext_house_of_mt_night", "file": ""},
+                                                {"name": "Ночь (без света)", "code": "bg ext_house_of_dv_night_without_light", "file": ""}
+                                            ]
+                                        },
+                                        {
+                                            "name": "Внутри",
+                                            "children": [
+                                                {"name": "День", "code": "bg int_house_of_mt_day", "file": ""},
+                                                {"name": "Закат", "code": "bg int_house_of_mt_sunset", "file": ""},
+                                                {"name": "Ночь", "code": "bg int_house_of_mt_night", "file": ""},
+                                                {"name": "Ночь (без света)", "code": "bg int_house_of_mt_night2", "file": ""},
+                                                {"name": "Ночь (без предметов)", "code": "bg int_house_of_mt_noitem_night", "file": ""}
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Домик Лены и Мику",
+                                    "children": [
+                                        {
+                                            "name": "Снаружи",
+                                            "children": [
+                                                {"name": "День", "code": "bg ext_house_of_un_day", "file": ""}
+                                            ]
+                                        },
+                                        {
+                                            "name": "Внутри",
+                                            "children": [
+                                                {"name": "День", "code": "bg int_house_of_un_day", "file": ""},
+                                                {"name": "Ночь", "code": "bg int_house_of_un_night", "file": ""}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Библиотека",
+                            "children": [
+                                {
+                                    "name": "Снаружи",
+                                    "children": [
+                                        {"name": "День", "code": "bg ext_library_day", "file": ""},
+                                        {"name": "Ночь", "code": "bg ext_library_night", "file": ""}
+                                    ]
+                                },
+                                {
+                                    "name": "Внутри",
+                                    "children": [
+                                        {"name": "День", "code": "bg int_library_day", "file": ""},
+                                        {"name": "Ночь", "code": "bg int_library_night", "file": ""},
+                                        {"name": "Ночь (со светильником)", "code": "bg int_library_night2", "file": ""}
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Музыкальный клуб",
+                            "children": [
+                                {
+                                    "name": "Снаружи",
+                                    "children": [
+                                        {"name": "День", "code": "bg ext_musclub_day", "file": ""}
+                                    ]
+                                },
+                                {
+                                    "name":  "Внутри",
+                                    "children": [
+                                        {"name": "День", "code": "bg int_musclud_day", "file": ""}
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Лагерные окресности",
+                    "children": [
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Ассеты, которые не показаны в игре",
+            "children": [
+                {
+                    "name": "Фоны",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Популярные ассеты из модов",
+            "children": [
+                {
+                    "name": "Фоны",
+                    "children": []
+                }
+            ]
+        }
+    ]
+}

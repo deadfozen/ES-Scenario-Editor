@@ -1,0 +1,3 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\qscintilla2_qt6.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\qscintilla2_qt6.dir/objects.a @CMakeFiles\qscintilla2_qt6.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\g++.exe -O3 -DNDEBUG -shared -o libqscintilla2_qt6.dll -Wl,--out-implib,libqscintilla2_qt6.dll.a -Wl,--major-image-version,15,--minor-image-version,1 -Wl,--whole-archive CMakeFiles\qscintilla2_qt6.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\qscintilla2_qt6.dir\linkLibs.rsp

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>doc/start.md</file>
+    </qresource>
+
+    <qresource prefix="/assets">
+        <file alias="assets.json">assets/assets.json</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/es-scenario-editor_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/es-scenario-editor_autogen.dir/ParseCache.txt"
+  "es-scenario-editor_autogen"
+  "CMakeFiles/es-scenario-editor.dir/assetpreview.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/assetpreview.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/docsdialog.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/docsdialog.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/editor/codeeditor.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/editor/codeeditor.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/editor/renpylexer.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/editor/renpylexer.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/es-scenario-editor_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/es-scenario-editor_autogen/EWIEGA46WW/qrc_resources.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/es-scenario-editor_autogen/mocs_compilation.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/es-scenario-editor_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/main.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/main.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/mainwindow.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/mainwindow.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/menubar.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/menubar.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/projectcreatedialog.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/projectcreatedialog.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/projectcreator.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/projectcreator.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/settings/settingsdialog.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/settings/settingsdialog.cpp.obj.d"
+  "CMakeFiles/es-scenario-editor.dir/themes/themesmanager.cpp.obj"
+  "CMakeFiles/es-scenario-editor.dir/themes/themesmanager.cpp.obj.d"
+  "es-scenario-editor.exe"
+  "es-scenario-editor.exe.manifest"
+  "es-scenario-editor.pdb"
+  "es-scenario-editor_autogen/EWIEGA46WW/qrc_resources.cpp"
+  "es-scenario-editor_autogen/mocs_compilation.cpp"
+  "es-scenario-editor_autogen/timestamp"
+  "libes-scenario-editor.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/es-scenario-editor.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

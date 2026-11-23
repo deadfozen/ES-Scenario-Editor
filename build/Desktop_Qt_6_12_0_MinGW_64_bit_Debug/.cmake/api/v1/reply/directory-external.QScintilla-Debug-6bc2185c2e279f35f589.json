@@ -1,0 +1,115 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"external/QScintilla/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 82,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 90,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 110,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 122,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"external/QScintilla/libqscintilla2_qt6d.dll.a"
+			],
+			"targetId" : "qscintilla2_qt6d::@938385b14c48e9b25fd4",
+			"targetIndex" : 3,
+			"targetIsImportLibrary" : true,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"external/QScintilla/libqscintilla2_qt6d.dll"
+			],
+			"targetId" : "qscintilla2_qt6d::@938385b14c48e9b25fd4",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"external/QScintilla/src/Qsci"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/QScintilla",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/external/QScintilla/QScintillaConfig.cmake",
+				"build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/external/QScintilla/QScintillaConfigVersion.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/QScintilla",
+			"exportName" : "QScintillaTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "qscintilla2_qt6d::@938385b14c48e9b25fd4",
+					"index" : 3
+				}
+			],
+			"paths" : 
+			[
+				"external/QScintilla/CMakeFiles/Export/36e0fed5b00de7d4d2315f2931d3fc43/QScintillaTargets.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/QScintilla",
+		"source" : "external/QScintilla"
+	}
+}
